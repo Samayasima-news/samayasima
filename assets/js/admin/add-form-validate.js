@@ -11,7 +11,7 @@ var titleError = document.getElementById('error-title');
 var imgError = document.getElementById('error-img');
 var catError = document.getElementById('error-cat');
 
-var titleRegx = new RegExp(/^[-@.,?\/#&+\w\s:;\’\'\"\`]{30,500}$/);
+var titleRegx = new RegExp(/^[-@.,?!\/#&+\w\s:;\’\'\"\`अ-हऀ-ॣ०-९]{5,500}$/);
 
 articleImage.addEventListener("change", function () {
   var file = this.files[0];
@@ -31,9 +31,9 @@ addForm.addEventListener("keyup", function (e) {
     e.preventDefault();
     descError.innerHTML = "Description cannot be empty !";
   }
-  else if (articleDesc.value.length < 1000) {
+  else if (articleDesc.value.length < 50) {
     e.preventDefault();
-    descError.innerHTML = "Description should be of minimum of 1000 characters long";
+    descError.innerHTML = "Description should be of minimum of 100 characters long";
   }
   else {
     descError.innerHTML = "";
@@ -59,7 +59,7 @@ addForm.addEventListener("keyup", function (e) {
   }
   else if (!titleRegx.test(articleTitle.value)) {
     e.preventDefault();
-    titleError.innerHTML = "Article should contain minimum of 30 alphanumeric characters long"
+    titleError.innerHTML = "Article should contain minimum of 10 alphanumeric characters long"
   }
   else {
     titleError.innerHTML = "";
@@ -71,9 +71,9 @@ addForm.addEventListener("submit", function (e) {
     e.preventDefault();
     descError.innerHTML = "Description cannot be empty !";
   }
-  else if (articleDesc.value.length < 1000) {
+  else if (articleDesc.value.length < 50) {
     e.preventDefault();
-    descError.innerHTML = "Description should be of minimum of 1000 characters long";
+    descError.innerHTML = "Description should be of minimum of 100 characters long";
   }
   else {
     descError.innerHTML = "";
@@ -99,7 +99,7 @@ addForm.addEventListener("submit", function (e) {
   }
   else if (!titleRegx.test(articleTitle.value)) {
     e.preventDefault();
-    titleError.innerHTML = "Article should contain minimum of 30 alphanumeric characters long"
+    titleError.innerHTML = "Article should contain minimum of 10 alphanumeric characters long"
   }
   else {
     titleError.innerHTML = "";
@@ -111,9 +111,9 @@ addForm.addEventListener("change", function (e) {
     e.preventDefault();
     descError.innerHTML = "Description cannot be empty !";
   }
-  else if (articleDesc.value.length < 1000) {
+  else if (articleDesc.value.length < 50) {
     e.preventDefault();
-    descError.innerHTML = "Description should be of minimum of 1000 characters long";
+    descError.innerHTML = "Description should be of minimum of 100 characters long";
   }
   else {
     descError.innerHTML = "";
@@ -139,7 +139,7 @@ addForm.addEventListener("change", function (e) {
   }
   else if (!titleRegx.test(articleTitle.value)) {
     e.preventDefault();
-    titleError.innerHTML = "Article should contain minimum of 30 alphanumeric characters long"
+    titleError.innerHTML = "Article should contain minimum of 10 alphanumeric characters long"
   }
   else {
     titleError.innerHTML = "";

@@ -3,8 +3,8 @@
   <div class="footer-left">
     <a href="./index.php"><img src="./assets/images/logo_light.png" /></a>
     <p>
-      The collection point of world news. A one stop shop. We bring to you the current happenings around the world from
-      esteemed writers. Make sure to read up and keep up with us through this platform that we bring to you. NewsGrid
+    विश्व समाचार को संग्रह बिन्दु। एक बिसौनी पसल। हामी तपाईलाई संसारभरका वर्तमान घटनाहरू बाट ल्याउँछौं
+    आदरणीय लेखकहरू। हामीले तपाईलाई ल्याएका यस प्लेटफर्म मार्फत पढ्न र हामीसँग रहन सुनिश्चित गर्नुहोस्। समयसीमा
     </p>
     <div class="socials">
       <a href="#"><i class="fab fa-facebook"></i></a>
@@ -15,16 +15,16 @@
   </div>
   <ul class="footer-right">
     <li>
-      <h2>Quick Links</h2>
+      <h2>द्रुत लिङ्कहरू</h2>
       <ul class="box">
-        <li><a href="./index.php">Home</a></li>
-        <li><a href="./categories.php">Categories</a></li>
-        <li><a href="./bookmarks.php">Bookmarks</a></li>
-        <li><a href="./search.php?trending=1">Trending</a></li>
+        <li><a href="./index.php">गृह पृष्ठ</a></li>
+        <li><a href="./categories.php">कोटीहरू</a></li>
+        <li><a href="./bookmarks.php">बुकमार्कहरू</a></li>
+        <li><a href="./search.php?trending=1">ट्रेन्डिङ</a></li>
       </ul>
     </li>
     <li>
-      <h2>Categories</h2>
+      <h2>कोटीहरू</h2>
       <ul class="box">
         <?php
 
@@ -59,19 +59,10 @@
         <li><a href="./categories.php">More +</a></li>
       </ul>
     </li>
-    <li>
-      <h2>Join Us</h2>
-      <ul class="box">
-        <li>
-          Share the story in your own words with the world. To Inspire with your writing make NewsGrid your platform to
-          help bring the stories of the globe to all people.
-        </li>
-        <a href="./author-login.php" class="my-1 btn btn-secondary">Sign Up</a>
-      </ul>
-    </li>
+    
   </ul>
   <div class="footer-bottom">
-    <p>All Rights Reserved by &copy; NewsGrid <?php echo date("Y")?></p>
+    <p>सबै अधिकार  &copy; समयसीमा द्वारा सुरक्षित  <?php echo date("Y")?></p>
   </div>
 </footer>
 

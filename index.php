@@ -9,7 +9,7 @@
 <!-- Article List Container -->
 <section class="py-1 category-list">
   <div class="container">
-    <h2 class="headings">Articles</h2>
+    <h2 class="headings">लेखहरू</h2>
     <div class="card-container">
       <?php
 
@@ -115,7 +115,7 @@
 <!-- Category List Container -->
 <section class="py-1 category-list">
   <div class="container">
-    <h2 class="headings">Categories</h2>
+    <h2 class="headings">कोटीहरू</h2>
     <div class="card-container">
       <?php
         // Category Query to fetch maximum 5 random category

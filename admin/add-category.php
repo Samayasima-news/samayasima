@@ -111,6 +111,8 @@
       </div>
     </div>
   </div>
+  <script src="assets\tinymce\tinymce.min.js"></script>
+  <script src="assets\tinymce\init-tinymce.js"></script>
   <script src="../assets/js/admin/add-form-validate-category.js"></script>
 </section>
 

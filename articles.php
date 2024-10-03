@@ -8,7 +8,7 @@
 <!-- Article List Container -->
 <section class="py-1 category-list">
   <div class="container">
-    <h2 class="headings">Articles</h2>
+    <h2 class="headings">लेखहरू</h2>
     <div class="card-container">
       <?php
 

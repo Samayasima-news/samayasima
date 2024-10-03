@@ -98,7 +98,7 @@
   <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
 
   <!-- TITLE OF THE PAGE -->
-  <title>NewsGrid | The Official News Portal | <?php echo $page_title; ?></title>
+  <title>समयसीमा | आधिकारिक समाचार पोर्टल | <?php echo $page_title; ?></title>
 
   <!-- FONTAWESOME LINK -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
@@ -120,10 +120,10 @@
     <input type="checkbox" id="btn" class="input" />
     <ul class="ul">
       <!-- We ECHO class current based upon the boolean variables used in above PHP Snippet -->
-      <li><a href="./index.php" <?php if($home) echo 'class="current"' ?>>Home</a></li>
+      <li><a href="./index.php" <?php if($home) echo 'class="current"' ?>>गृह पृष्ठ</a></li>
       <li>
-        <label for="btn-1" class="show">Categories +</label>
-        <a href="./categories.php" <?php if($category) echo 'class="current"' ?>>Categories</a>
+        <label for="btn-1" class="show">कोटीहरू +</label>
+        <a href="./categories.php" <?php if($category) echo 'class="current"' ?>>कोटीहरू</a>
         <input type="checkbox" id="btn-1" class="input" />
         <ul>
           <?php
@@ -154,21 +154,21 @@
               }
             }
           ?>
-          <li><a href="./categories.php">More +</a></li>
+          <li><a href="./categories.php">थप +</a></li>
         </ul>
       </li>
-      <li><a href="./bookmarks.php" <?php if($bookmark) echo 'class="current"' ?>>Bookmarks</a></li>
+      <li><a href="./bookmarks.php" <?php if($bookmark) echo 'class="current"' ?>>बुकमार्कहरू</a></li>
       <?php
         if(isset($_SESSION['USER_NAME'])) {
         }else {
       ?>
       <li>
-        <label for="btn-2" class="show">Login +</label>
-        <a href="./user-login.php" <?php if($login) echo 'class="current"' ?>>Login</a>
+        <label for="btn-2" class="show">लगइन गर्नुहोस् +</label>
+        <a href="./user-login.php" <?php if($login) echo 'class="current"' ?>>लगइन गर्नुहोस्
+        </a>
         <input type="checkbox" id="btn-2" class="input" />
         <ul>
-          <li><a href="./user-login.php">Reader</a></li>
-          <li><a href="./author-login.php">Author</a></li>
+          <li><a href="./user-login.php">पाठक</a></li>
         </ul>
       </li>
       <?php
@@ -176,7 +176,7 @@
       ?>
       <li>
         <a href="./search.php" <?php if($search) echo 'class="current"' ?>>
-          <span>Search</span>
+          <span>खोजी गर्नुहोस्</span>
           <i id="search-icon" class="fas fa-search"></i>
         </a>
       </li>
@@ -193,15 +193,15 @@
               echo 'class="current" '; 
             }
           echo
-            '>Settings</a>
+            '>सेटिङहरू</a>
             <input type="checkbox" id="btn-2" class="input" />
             <ul>
-              <li><a href="./user-change-password.php">Change Password</a></li>
-              <li><a href="./logout.php">Logout</a></li>
+              <li><a href="./user-change-password.php">पासवर्ड परिवर्तन गर्नुहोस्</a></li>
+              <li><a href="./logout.php">लगआउट</a></li>
               </ul>
           </li>
           ';
-          echo '<li><a disabled>Hello '.$_SESSION["USER_NAME"].' !</a></li>';
+          echo '<li><a disabled>नमस्ते '.$_SESSION["USER_NAME"].' !</a></li>';
         }
       ?>
     </ul>

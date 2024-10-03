@@ -65,7 +65,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NewsGrid Author Panel | <?php echo $page_title ?></title>
+  <title>Samayasima Author Panel | <?php echo $page_title ?></title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
@@ -84,7 +84,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">NewsGrid </a>
+        <a class="navbar-brand">Samayasima</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">

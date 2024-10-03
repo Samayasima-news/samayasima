@@ -74,9 +74,10 @@
       
       // HTML CODE for the PDF file
       $html = '
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
       <style>
         * {
-          font-family: "Nunito Sans", sans-serif;
+          font-family: "","Nunito Sans", sans-serif;
         }
         article {
           width: 85%;

@@ -6,7 +6,7 @@
   if(!isset($_SESSION['USER_LOGGED_IN'])) {
     
     // Redirected to login page along with a message
-    alert("Please Login to See Your Bookmarks");
+    alert("कृपया आफ्नो बुकमार्कहरू हेर्न लगइन गर्नुहोस्");
     redirect('./user-login.php');
   }
 ?>
@@ -15,7 +15,7 @@
 <!-- Article List Container -->
 <section class="py-1 category-list">
   <div class="container">
-    <h2 class="headings">Bookmarks</h2>
+    <h2 class="headings">बुकमार्कहरू</h2>
     <div class="card-container">
       <?php
 

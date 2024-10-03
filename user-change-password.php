@@ -6,7 +6,7 @@
   if(!isset($_SESSION['USER_LOGGED_IN'])) {
 
     // If user not logged in Redirect to login page along with a message
-    alert("Please Login to Change your password");
+    alert("कृपया आफ्नो पासवर्ड परिवर्तन गर्न लगइन गर्नुहोस्");
     redirect('./user-login.php');
   }
 
@@ -72,7 +72,7 @@
           if(!$update_result) {
 
             // Print Error along with an error
-            alert("Sorry. Try again later !");
+            alert("माफ गर्नुहोस्। पछि फेरि प्रयास गर्नुहोस् !");
             echo "Error: ".mysqli_error($con);
           }
           
@@ -80,7 +80,7 @@
           else {
 
             // Redirect to the home page along with a message
-            alert("Password Updated !");
+            alert("पासवर्ड अपडेट गरियो !");
             redirect('./index.php');
           }
         }
@@ -113,14 +113,14 @@
           if(!$update_result) {
 
             // Print Error along with an error
-            alert("Sorry. Try again later !");
+            alert("माफ गर्नुहोस्। पछि फेरि प्रयास गर्नुहोस् !");
             echo "Error: ".mysqli_error($con);
           }
           // If Query ran successfully
           else {
 
             // Redirect to the home page along with a message
-            alert("Password Updated !");
+            alert("पासवर्ड अपडेट गरियो !");
             redirect('./index.php');
           }
         }
@@ -129,14 +129,14 @@
         else {
 
           // Redirected to same page along with a message
-          alert("Wrong Password. Try again !");
+          alert("गलत पासवर्ड। पुन: प्रयास गर्नुहोस् !");
         }
       }
     }
 
     // If no user with email exists =>  email is not registered
     else {
-      alert("Try again Later!");
+      alert("पछि पुन: प्रयास गर्नुहोस् !");
       redirect('./user-login.php');
     }
   }
@@ -150,25 +150,25 @@
     <!-- Div for password change -->
     <div class="left">
       <div class="form-title">
-        <h4>Change Password</h4>
+        <h4>पासवर्ड परिवर्तन गर्नुहोस्</h4>
       </div>
       <div class="login-form-container">
         <!-- Form for Password change -->
         <form method="POST" class="login-form" id="change_pass_form">
           <div class="input-field">
-            <input type="password" name="old_password" id="old_password" placeholder=" Old Password" autocomplete="off"
+            <input type="password" name="old_password" id="old_password" placeholder=" पुरानो पासवर्ड" autocomplete="off"
               required>
           </div>
           <div class="input-field">
-            <input type="password" name="new_password" id="new_password" placeholder=" New Password" autocomplete="off"
+            <input type="password" name="new_password" id="new_password" placeholder=" नयाँ पासवर्ड" autocomplete="off"
               required>
           </div>
           <div class="input-field">
             <input type="password" name="confirm_new_password" id="confirm_new_password"
-              placeholder=" Confirm New Password" autocomplete="off" required>
+              placeholder=" नयाँ पासवर्ड पुष्टि गर्नुहोस्" autocomplete="off" required>
           </div>
           <div class="input-field">
-            <button type="submit" name="submit">Login</button>
+            <button type="submit" name="submit">परिवर्तन गर्नुहोस्</button>
           </div>
         </form>
       </div>

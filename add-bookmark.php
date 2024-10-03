@@ -10,7 +10,7 @@
   if(!isset($_SESSION['USER_LOGGED_IN'])) {
     
     // Redirected to login page along with a message
-    alert('Please log in to Add Bookmarks');
+    alert('कृपया बुकमार्कहरू थप्न लग इन गर्नुहोस्');
     redirect('./user-login.php');
   }
 
@@ -67,7 +67,7 @@
   if($result) {
 
     // Redirected to home page along with a message
-    alert("Bookmark Added Successfuly");
+    alert("बुकमार्क सफलतापूर्वक थपियो");
     redirect('./bookmarks.php');
   }
 
@@ -75,7 +75,7 @@
   else {
     
     // Redirected to home page along with a message
-    alert('Try Again Later');
+    alert('पछि पुन: प्रयास गर्नुहोस्');
     redirect('./index.php');
   }
 

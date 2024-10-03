@@ -11,7 +11,7 @@ var titleError = document.getElementById("error-title");
 var imgError = document.getElementById("error-img");
 var catError = document.getElementById("error-cat");
 
-var titleRegex = new RegExp(/^[-@.,?\/#&+\w\s:;\’\'\"\`]{3,20}$/);
+var titleRegex = new RegExp(/^[-@.,?!\/#&+\w\s:;\’\'\"\`अ-हऀ-ॣ०-९]{3,20}$/);
 
 categoryImage.addEventListener("change", function () {
   var file = this.files[0];
@@ -30,10 +30,10 @@ addForm.addEventListener("keyup", function (e) {
   if (categoryDesc.value == "" || categoryDesc.value == null) {
     e.preventDefault();
     descError.innerHTML = "Description cannot be empty !";
-  } else if (categoryDesc.value.length < 100) {
+  } else if (categoryDesc.value.length < 5) {
     e.preventDefault();
     descError.innerHTML =
-      "Description should be of minimum of 100 characters long";
+      "Description should be of minimum of 10 characters long";
   } else {
     descError.innerHTML = "";
   }
@@ -68,10 +68,10 @@ addForm.addEventListener("submit", function (e) {
   if (categoryDesc.value == "" || categoryDesc.value == null) {
     e.preventDefault();
     descError.innerHTML = "Description cannot be empty !";
-  } else if (categoryDesc.value.length < 100) {
+  } else if (categoryDesc.value.length < 5) {
     e.preventDefault();
     descError.innerHTML =
-      "Description should be of minimum of 100 characters long";
+      "Description should be of minimum of 10 characters long";
   } else {
     descError.innerHTML = "";
   }
@@ -106,10 +106,10 @@ addForm.addEventListener("change", function (e) {
   if (categoryDesc.value == "" || categoryDesc.value == null) {
     e.preventDefault();
     descError.innerHTML = "Description cannot be empty !";
-  } else if (categoryDesc.value.length < 100) {
+  } else if (categoryDesc.value.length < 5) {
     e.preventDefault();
     descError.innerHTML =
-      "Description should be of minimum of 100 characters long";
+      "Description should be of minimum of 10 characters long";
   } else {
     descError.innerHTML = "";
   }

@@ -10,7 +10,7 @@
 <!-- Category List Container -->
 <section class="py-1 category-list">
   <div class="container">
-    <h2 class="headings">Categories</h2>
+    <h2 class="headings">कोटीहरू</h2>
     <div class="card-container">
       <?php
 

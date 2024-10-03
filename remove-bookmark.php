@@ -65,7 +65,7 @@
   if($result) {
 
     // Redirected to home page along with a message
-    alert("Bookmark Removed Successfuly");
+    alert("बुकमार्क सफलतापूर्वक हटाइयो");
     redirect('./index.php');
   }
   
@@ -73,7 +73,7 @@
   else {
         
     // Redirected to home page along with a message
-    alert('Try Again Later');
+    alert('पछि पुन: प्रयास गर्नुहोस्');
     redirect('./index.php');
   }
 

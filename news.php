@@ -144,17 +144,17 @@
 
             // If the article is bookmarked
             if ($bookmarked) {
-              echo '<a class="btn btn-bookmark" href="remove-bookmark.php?id='.$article_id.'">Remove From Bookmark &nbsp<i class="fas fa-bookmark"></i></a>';   
+              echo '<a class="btn btn-bookmark" href="remove-bookmark.php?id='.$article_id.'">बुकमार्कबाट हटाउनुहोस्
+ &nbsp<i class="fas fa-bookmark"></i></a>';   
             }
 
             // If the article is not bookmarked
             else {
-              echo '<a class="btn btn-bookmark" href="add-bookmark.php?id='.$article_id.'">Add To Bookmark &nbsp<i class="far fa-bookmark"></i></a>';   
+              echo '<a class="btn btn-bookmark" href="add-bookmark.php?id='.$article_id.'">बुकमार्कमा थप्नुहोस्
+ &nbsp<i class="far fa-bookmark"></i></a>';   
             }
             echo'&nbsp';
-
-            // Download button
-            echo '<a class="btn btn-download" target="_blank" href="download-article.php?id='.$article_id.'">Download Article &nbsp<i class="fas fa-download"></i></a>';   
+  
           ?>
         </div>
         <?php
@@ -173,7 +173,7 @@
 
         <!-- Trending Articles Card -->
         <div class="card2">
-          <h2 class="aside-title">Must read</h2>
+          <h2 class="aside-title">विशेष</h2>
           <?php
 
             // Trending Article Query to fetch maximum 5 random trending articles
@@ -221,14 +221,16 @@
 
           <!-- View all button -->
           <div class="text-center py-1">
-            <a href="search.php?trending=1" class="btn btn-card">View All <span>&twoheadrightarrow; </span>
+            <a href="search.php?trending=1" class="btn btn-card">सबै हेर्नुहोस्
+            <span>&twoheadrightarrow; </span>
             </a>
           </div>
         </div>
 
         <!-- Related Articles Card -->
         <div class="card2">
-          <h2 class="aside-title">People Also Read</h2>
+          <h2 class="aside-title">थप समाचार
+          </h2>
           <?php
 
             // Related Article Query to fetch maximum of 5 random articles of same article other than the present one
@@ -276,7 +278,8 @@
 
           <!-- View all button -->
           <div class="text-center py-1">
-            <a href="articles.php?id=<?php echo $cat_id;?>" class="btn btn-card">View All <span>&twoheadrightarrow;
+            <a href="articles.php?id=<?php echo $cat_id;?>" class="btn btn-card">सबै हेर्नुहोस्
+            <span>&twoheadrightarrow;
               </span>
             </a>
           </div>

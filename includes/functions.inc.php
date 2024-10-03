@@ -68,13 +68,14 @@ alert('<?php echo $message ?>');
       echo '  <div class="tag tag-trend"><a href="search.php?trending=1">TRENDING</a></div>';
     }
     echo '
+    <a href="news.php?id='.$id.'" >
         <h3 class="card-title" href="./article.html">
           '.$title.'
         </h3>
         <p class="card-data">
           '.$data.'
         </p>
-        <a href="news.php?id='.$id.'" class="btn btn-card">Read More <span>&twoheadrightarrow; </span>
+      
         </a>
       </div>
     </article>';
@@ -96,7 +97,7 @@ alert('<?php echo $message ?>');
         </p>
         <div class="btn-block">
           <a href="articles.php?id='.$id.'" class="btn btn-card">
-            Read More 
+            भ्रमण गर्नुहोस् 
             <span>&twoheadrightarrow; </span>
           </a>
         </div>
@@ -108,7 +109,7 @@ alert('<?php echo $message ?>');
   function createMoreCard($link) {
     echo '
     <a href="'.$link.'" class="card card-more d-flex">
-      <h3>MORE +</h3>
+      <h3>थप +</h3>
     </a>
     ';
   }
@@ -118,7 +119,7 @@ alert('<?php echo $message ?>');
     echo '
     <div class="d-flex">
       <a href="./categories.php" class="card card-more d-flex" style="height: 300px; max-width: 400px;">
-        <h4>Sorry ! No Articles in this Page</h4>
+        <h4>माफ गर्नुहोस्! यस श्रेणीमा कुनै लेख छैन</h4>
       </a>
     </div>
     ';
@@ -135,7 +136,7 @@ alert('<?php echo $message ?>');
           echo '  <div class="tag tag-new">NEW</div>';
         }
         if($trend) {
-          echo '  <div class="tag tag-trend">TRENDING</div>';
+          echo '  <div class="tag tag-trend">ट्रेन्डिङ</div>';
         }
       echo
         '
@@ -143,7 +144,7 @@ alert('<?php echo $message ?>');
         <p>
           '.$content.'
         </p>
-        <a href="news.php?id='.$id.'" class="btn btn-primary">Read More</a>
+        <a href="news.php?id='.$id.'" class="btn btn-primary">थप पढ्नुहोस्</a>
       </div>
     </div>';
   }

@@ -88,7 +88,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NewsGrid Admin Panel | Login</title>
+  <title>Samayasima Admin Panel | Login</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
@@ -101,7 +101,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="text-center">NewsGrid <small>Admin Login</small></h1>
+          <h1 class="text-center">Samayasima <small>Admin Login</small></h1>
         </div>
       </div>
     </div>
@@ -114,21 +114,27 @@
           <form id="login" method="POST" class="well">
             <div class="form-group">
               <label>Email Address</label>
-              <input type="email" class="form-control" placeholder="Enter Email" name="login-email" />
+              <input type="email" id="login-email" class="form-control" placeholder="Enter Email" name="login-email" />
             </div>
             <div class="form-group">
               <label>Password</label>
-              <input type="password" class="form-control" placeholder="Password" name="login-password" />
+              <input type="password"
+              id="login-password"  class="form-control" placeholder="Password" name="login-password" />
             </div>
             <button type="submit" class="btn btn-danger btn-block" name="login-submit">
               Login
             </button>
           </form>
+          <!-- Div to display the errors from the Login form -->
+          <div class="form-errors d-flex">
+            <p class="errors" id="login-errors"></p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
+  <!-- Script for form Validation -->
+<script src="./assets/js/form-validate.js"></script>
 
   <?php
     require('./includes/footer.inc.php')

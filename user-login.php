@@ -59,7 +59,7 @@
         else {
 
           // Redirected to login page along with a message
-          alert("Wrong Password");
+          alert("गलत पासवर्ड");
           redirect('./user-login.php');
         }
       }     
@@ -68,7 +68,7 @@
     else {
 
       // Redirected to signup page along with a message
-      alert("This Email is not registered. Please Register");
+      alert("यो इमेल दर्ता गरिएको छैन। कृपया दर्ता गर्नुहोस्");
       redirect('./user-login.php');
     }
   }
@@ -99,7 +99,7 @@
     if($check_row > 0) {
 
       // Redirecting to the login page along with a message
-      alert("Email Already Exists");
+      alert("Eइमेल पहिल्यै अवस्थित छ");
       redirect('./user-login.php');
     }
 
@@ -119,7 +119,7 @@
       if($result) {
         
         // Redirected to login page with a message
-        alert("Signup Successful, Please Login");
+        alert("साइनअप सफल, कृपया लगइन गर्नुहोस्");
         redirect('./user-login.php');
       }
       
@@ -140,21 +140,21 @@
     <!-- Left div for login -->
     <div class="left">
       <div class="form-title">
-        <h4>User Login</h4>
+        <h4>प्रयोगकर्ता लगइन</h4>
       </div>
       <div class="login-form-container">
         <!-- Form for Login -->
         <form method="POST" class="login-form" id="login-form">
           <div class="input-field">
-            <input type="email" name="login-email" id="login-email" placeholder=" Email Address" autocomplete="off"
+            <input type="email" name="login-email" id="login-email" placeholder=" इमेल ठेगाना" autocomplete="off"
               required>
           </div>
           <div class="input-field">
-            <input type="password" name="login-password" id="login-password" placeholder=" Password" autocomplete="off"
+            <input type="password" name="login-password" id="login-password" placeholder=" पासवर्ड" autocomplete="off"
               required>
           </div>
           <div class="input-field">
-            <button type="submit" name="login-submit">Login</button>
+            <button type="submit" name="login-submit">लगइन गर्नुहोस्</button>
           </div>
         </form>
       </div>
@@ -166,35 +166,35 @@
     <!-- Right div for Signup -->
     <div class="right">
       <div class="form-title">
-        <h4>User Signup</h4>
+        <h4>प्रयोगकर्ता साइनअप</h4>
       </div>
       <div class="signup-form-container">
         <!-- Form for Signup -->
         <form method="POST" class="signup-form" id="signup-form">
           <div class="input-field">
-            <input type="text" name="signup-name" id="signup-name" placeholder=" Name" autocomplete="off" required>
+            <input type="text" name="signup-name" id="signup-name" placeholder="नाम" autocomplete="off" required>
           </div>
           <div class="input-field">
-            <input type="email" name="signup-email" id="signup-email" placeholder=" Email Address" autocomplete="off"
+            <input type="email" name="signup-email" id="signup-email" placeholder="इमेल ठेगाना" autocomplete="off"
               required>
           </div>
           <div class="input-field">
-            <input type="password" name="signup-password" id="signup-password" placeholder=" Password"
+            <input type="password" name="signup-password" id="signup-password" placeholder="पासवर्ड"
               autocomplete="off" required>
           </div>
           <div class="input-field">
             <input type="password" name="signup-confirm-password" id="signup-confirm-password"
-              placeholder=" Confirm Password" autocomplete="off" required>
+              placeholder=" पासवर्ड पुष्टि गर्नुहोस्" autocomplete="off" required>
           </div>
           <div class="input-field">
-            <button type="submit" name="signup-submit">Signup</button>
+            <button type="submit" name="signup-submit">साइनअप गर्नुहोस्</button>
           </div>
         </form>
       </div>
       <!-- Div to display the errors from the Signup form -->
       <div class="form-errors d-flex">
         <p class="errors" id="signup-errors">
-          Password must be 6 to 20 characters long with aleast 1 number, 1 uppercase and 1 lowecase
+        पासवर्ड कम्तीमा १ नम्बर, १ अपरकेस र १ लोकेस भएको ६ देखि २० क्यारेक्टर लामो हुनुपर्छ
         </p>
       </div>
     </div>

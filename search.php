@@ -11,7 +11,7 @@
         <table class=".search-table">
           <tr>
             <td>
-              <input class="search-input" type="text" name="name" id="name" placeholder="Search" autocomplete="off" />
+              <input class="search-input" type="text" name="name" id="name" placeholder="खोज्नुहोस्" autocomplete="off" />
             </td>
           </tr>
         </table>
@@ -19,9 +19,9 @@
       <div class="filters">
         <!-- Search filter based on Category -->
         <div>
-          <label for="category_select">Category</label>
+          <label for="category_select">कोटीहरू</label>
           <select name="category_select" id="category_select">
-            <option value="">Select Any Category</option>
+            <option value="">कुनै पनि कोटी चयन गर्नुहोस्</option>
             <?php
 
                 // Category Query to fetch all the categories from DB in lexicographic order
@@ -53,26 +53,26 @@
 
         <!-- Search filter based on From Date -->
         <div>
-          <label for="from_date">From</label>
+          <label for="from_date">बाट</label>
           <input type="date" name="from_date" id="from_date" max="<?php echo date("Y-m-d") ?>">
         </div>
 
         <!-- Search filter based on To Date -->
         <div>
-          <label for="to_date">To</label>
+          <label for="to_date">सम्म</label>
           <input type="date" name="to_date" id="to_date" max="<?php echo date("Y-m-d") ?>">
         </div>
 
         <!-- Search filter based on Trending -->
         <div>
-          <label for="trending">Trending</label>
+          <label for="trending">ट्रेन्डिङ</label>
           <input type="checkbox" name="trending" id="trending" value="1">
         </div>
       </div>
 
       <center>
         <!-- Button to search based on above filters -->
-        <button type="submit" name="search" class="btn btn-primary">Search</button>
+        <button type="submit" name="search" class="btn btn-primary">खोज्नुहोस्</button>
       </center>
     </form>
   </div>
@@ -80,7 +80,7 @@
 <!-- Container to store the Search Results -->
 <section class="py-1 category-list">
   <div class="container">
-    <h2 class="search-heading">Search Results :</h2>
+    <h2 class="search-heading">खोज परिणामहरू :</h2>
     <div class="card-container">
       <?php
 
