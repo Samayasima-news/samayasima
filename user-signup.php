@@ -137,43 +137,46 @@
 <div class="container p-2">
   <!-- Container to store two form divs -->
   <div class="forms-container">
-    <!-- Left div for login -->
-    <div class="left">
+
+    <!-- Right div for Signup -->
+    <div class="right">
       <div class="form-title">
-        <h4>प्रयोगकर्ता लगइन</h4>
+        <h4>प्रयोगकर्ता साइनअप</h4>
       </div>
-      <div class="login-form-container">
-        <!-- Form for Login -->
-        <form method="POST" class="login-form" id="login-form">
+      <div class="signup-form-container">
+        <!-- Form for Signup -->
+        <form method="POST" class="signup-form" id="signup-form">
           <div class="input-field">
-            <input type="email" name="login-email" id="login-email" placeholder=" इमेल ठेगाना" autocomplete="off"
+            <input type="text" name="signup-name" id="signup-name" placeholder="नाम" autocomplete="off" required>
+          </div>
+          <div class="input-field">
+            <input type="email" name="signup-email" id="signup-email" placeholder="इमेल ठेगाना" autocomplete="off"
               required>
           </div>
           <div class="input-field">
-            <input type="password" name="login-password" id="login-password" placeholder=" पासवर्ड" autocomplete="off"
-              required>
+            <input type="password" name="signup-password" id="signup-password" placeholder="पासवर्ड"
+              autocomplete="off" required>
           </div>
-          <div class="input-field" style="margin-bottom: 20px;">
-            <button type="submit"  name="login-submit">लगइन गर्नुहोस्</button>
+          <div class="input-field">
+            <input type="password" name="signup-confirm-password" id="signup-confirm-password"
+              placeholder=" पासवर्ड पुष्टि गर्नुहोस्" autocomplete="off" required>
           </div>
-
-          <!-- horizontal line -->
-          <div style="text-align: center; border-bottom: 1px solid #000; line-height: 0.1em; margin: 10px 0 5px;">
-            <span style="background: #fff; padding: 0 10px;">वा</span>
+          <div class="input-field">
+            <button type="submit" name="signup-submit">साइनअप गर्नुहोस्</button>
           </div>
-
         </form>
-        <div class="input-field">
-            <a href="user-signup.php"><button style="cursor: pointer;">साइनअप गर्नुहोस्</button></a>
+
+        <div class="input-field" style="display: flex; justify-content: center; margin-top:15px">
+            <a href="user-login.php"><b>पहिले नै खाता छ ?</b></a>
           </div>
       </div>
-      <!-- Div to display the errors from the Login form -->
-      <div class="form-errors">
-        <p class="errors" id="login-errors"></p>
+      <!-- Div to display the errors from the Signup form -->
+      <div class="form-errors d-flex">
+        <p class="errors" id="signup-errors">
+        पासवर्ड कम्तीमा १ नम्बर, १ अपरकेस र १ लोकेस भएको ६ देखि २० क्यारेक्टर लामो हुनुपर्छ
+        </p>
       </div>
     </div>
-    
-
   </div>
 </div>
 

@@ -112,7 +112,9 @@
 
 
   <!-- ======== NAVBAR ======== -->
+  
   <nav class="navbar">
+  
     <div class="logo"><a href="./index.php"><img src="./assets/images/logo.png" /></a></div>
     <label for="btn" class="icon">
       <span class="fa fa-bars"></span>
@@ -176,7 +178,7 @@
       ?>
       <li>
         <a href="./search.php" <?php if($search) echo 'class="current"' ?>>
-          <span>खोजी गर्नुहोस्</span>
+          <span>खोज्नुहोस</span>
           <i id="search-icon" class="fas fa-search"></i>
         </a>
       </li>
@@ -186,7 +188,7 @@
         if(isset($_SESSION['USER_NAME'])) {
           echo '
           <li>
-            <label for="btn-2" class="show">Settings</label>
+            <label for="btn-2" class="show">सेटिङहरू</label>
             <a href="#"';
             
             if($changePass){

@@ -4,7 +4,6 @@
   session_start();
 
   if(!isset($_SESSION['ADMIN_LOGGED_IN'])) {
-    alert("Please Login to Enter Admin Panel");
     redirect('./login.php');
   }
   
@@ -21,11 +20,25 @@
   $pass = false; 
   $category = false; 
   $article = false;
+  $author= false;
+  $delete_author = false;
   
   // Strpos returns the position of the search string in the main string or returns 0 (false)
   // Checking if the page is Home Page
   if(strpos($uri,"/index.php") != false){
     $page_title = " Dashboard";
+  }
+
+  if(strpos($uri,"author/index.php") != false){
+    $page_title = " author";
+    $home = false;
+    $author = true;
+  }
+
+  if(strpos($uri,"./author11.php") != false){
+    $page_title = " Delete_Author";
+    $home = false;
+    $author = true;
   }
 
   if(strpos($uri,"/articles.php") != false){
@@ -80,11 +93,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">Samayasima </a>
+        <a class="navbar-brand" href="./index.php">Samayasima  </a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li <?php if($home) echo 'class="active"' ?>><a href="./index.php">Dashboard</a></li>
+          <li <?php if($author) echo 'class="active"' ?>><a href="./author-signup.php">Author_Signup</a></li>
+          <li <?php if($author) echo 'class="active"' ?>><a href="./author11.php">Delete_Author</a></li>
           <li <?php if($article) echo 'class="active"' ?>><a href="./articles.php">Articles</a></li>
           <li <?php if($category) echo 'class="active"' ?>><a href="./categories.php">Categories</a></li>
           <li <?php if($pass) echo 'class="active"' ?>><a href="./change-password.php">Change Password</a></li>

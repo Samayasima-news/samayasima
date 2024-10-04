@@ -75,122 +75,122 @@
   }
 
   // Whenever signup button is pressed
-  if(isset($_POST['signup-submit'])) {
+//   if(isset($_POST['signup-submit'])) {
     
-    // Fetching values via POST and passing them to user defined 
-    // function to get rid of special characters used in SQL
-    $signupName = get_safe_value($_POST['signup-name']);
-    $signupEmail = get_safe_value($_POST['signup-email']);
-    $signupPassword = get_safe_value($_POST['signup-password']);
+//     // Fetching values via POST and passing them to user defined 
+//     // function to get rid of special characters used in SQL
+//     $signupName = get_safe_value($_POST['signup-name']);
+//     $signupEmail = get_safe_value($_POST['signup-email']);
+//     $signupPassword = get_safe_value($_POST['signup-password']);
 
-    // Check Query to check if the email submitted is present or registered already
-    $check_sql = "SELECT author_email FROM author 
-                  WHERE author_email = '{$signupEmail}'";
+//     // Check Query to check if the email submitted is present or registered already
+//     $check_sql = "SELECT author_email FROM author 
+//                   WHERE author_email = '{$signupEmail}'";
     
-    // Running the Check Query
-    $check_result = mysqli_query($con,$check_sql);
+//     // Running the Check Query
+//     $check_result = mysqli_query($con,$check_sql);
     
-    // Returns the number of rows from the result retrieved.
-    $check_row = mysqli_num_rows($check_result);
+//     // Returns the number of rows from the result retrieved.
+//     $check_row = mysqli_num_rows($check_result);
   
-    // If query has any result (records) => If any author with the email exists
-    if($check_row > 0) {
+//     // If query has any result (records) => If any author with the email exists
+//     if($check_row > 0) {
       
-      // Redirecting to the login page along with a message
-      alert("Email Already Exists");
-      redirect('./author-login.php');
-    }
+//       // Redirecting to the login page along with a message
+//       alert("Email Already Exists");
+//       redirect('./author-login.php');
+//     }
     
-    // If the query has no records => No author with the email exists (New Author)
-    else {
+//     // If the query has no records => No author with the email exists (New Author)
+//     else {
 
-      // Check User Query if the email is present as a user
-      $check_user_sql = "SELECT user_email FROM user 
-                         WHERE user_email = '{$signupEmail}'";
+//       // Check User Query if the email is present as a user
+//       $check_user_sql = "SELECT user_email FROM user 
+//                          WHERE user_email = '{$signupEmail}'";
       
-      // Running Check User Query
-      $check_user_result = mysqli_query($con,$check_user_sql);
+//       // Running Check User Query
+//       $check_user_result = mysqli_query($con,$check_user_sql);
       
-      // Returns the number of rows from the result retrieved.
-      $check_user_row = mysqli_num_rows($check_user_result);
+//       // Returns the number of rows from the result retrieved.
+//       $check_user_row = mysqli_num_rows($check_user_result);
       
-      // Creating new password hash using a strong one-way hashing algorithm => CRYPT_BLOWFISH algorithm
-      $strg_pass = password_hash($signupPassword,PASSWORD_BCRYPT);
+//       // Creating new password hash using a strong one-way hashing algorithm => CRYPT_BLOWFISH algorithm
+//       $strg_pass = password_hash($signupPassword,PASSWORD_BCRYPT);
       
-      // If query has any result (records) => If any user with the email exists
-      if($check_user_row > 0) {
+//       // If query has any result (records) => If any user with the email exists
+//       if($check_user_row > 0) {
         
-        // Signup Query Author to insert values into the DB
-        $signupQueryAuthor = "INSERT INTO author 
-                              (author_name, author_email, author_password) 
-                              VALUES 
-                              ('{$signupName}', '{$signupEmail}', '{$strg_pass}')";
+//         // Signup Query Author to insert values into the DB
+//         $signupQueryAuthor = "INSERT INTO author 
+//                               (author_name, author_email, author_password) 
+//                               VALUES 
+//                               ('{$signupName}', '{$signupEmail}', '{$strg_pass}')";
         
-        // Running the Signup Query Author
-        $author_result = mysqli_query($con, $signupQueryAuthor);
+//         // Running the Signup Query Author
+//         $author_result = mysqli_query($con, $signupQueryAuthor);
         
-        // Signup Query User to updating password into the DB
-        $signupQueryUser = "UPDATE user 
-                            SET user_name = '{$signupName}',
-                            user_password = '{$strg_pass}'
-                            WHERE user_email = '{$signupEmail}'";
+//         // Signup Query User to updating password into the DB
+//         $signupQueryUser = "UPDATE user 
+//                             SET user_name = '{$signupName}',
+//                             user_password = '{$strg_pass}'
+//                             WHERE user_email = '{$signupEmail}'";
         
-        // Running the Signup Query User
-        $user_result = mysqli_query($con, $signupQueryUser);
+//         // Running the Signup Query User
+//         $user_result = mysqli_query($con, $signupQueryUser);
         
-        //If both Queries ran successfully
-        if($author_result && $user_result) {
+//         //If both Queries ran successfully
+//         if($author_result && $user_result) {
           
-          // Redirected to login page with a message
-          alert("Author Signup Successful, Please Login");
-          redirect('./author-login.php');
-        }
+//           // Redirected to login page with a message
+//           alert("Author Signup Successful, Please Login");
+//           redirect('./author-login.php');
+//         }
         
-        // If the Query failed
-        else {
+//         // If the Query failed
+//         else {
          
-          // Print the error
-          echo "Error: ".mysqli_error($con);
-        }
-      }
+//           // Print the error
+//           echo "Error: ".mysqli_error($con);
+//         }
+//       }
       
-      // If the query has no records => No user with the email exists (New User)
-      else {
+//       // If the query has no records => No user with the email exists (New User)
+//       else {
 
-        // Signup Query Author to insert values into the DB
-        $signupQueryAuthor = "INSERT INTO author 
-                              (author_name, author_email, author_password) 
-                              VALUES 
-                              ('{$signupName}', '{$signupEmail}', '{$strg_pass}')";
+//         // Signup Query Author to insert values into the DB
+//         $signupQueryAuthor = "INSERT INTO author 
+//                               (author_name, author_email, author_password) 
+//                               VALUES 
+//                               ('{$signupName}', '{$signupEmail}', '{$strg_pass}')";
         
-        // Running the Signup Query Author
-        $author_result = mysqli_query($con, $signupQueryAuthor);
+//         // Running the Signup Query Author
+//         $author_result = mysqli_query($con, $signupQueryAuthor);
         
-        // Signup Query User to insert values into the DB
-        $signupQueryUser = "INSERT INTO user 
-                            (user_name, user_email, user_password) 
-                            VALUES 
-                            ('{$signupName}', '{$signupEmail}', '{$strg_pass}')";
+//         // Signup Query User to insert values into the DB
+//         $signupQueryUser = "INSERT INTO user 
+//                             (user_name, user_email, user_password) 
+//                             VALUES 
+//                             ('{$signupName}', '{$signupEmail}', '{$strg_pass}')";
         
-        // Running the Signup Query User
-        $user_result = mysqli_query($con, $signupQueryUser);
+//         // Running the Signup Query User
+//         $user_result = mysqli_query($con, $signupQueryUser);
         
-        //If both Queries ran successfully
-        if($user_result && $author_result) {
+//         //If both Queries ran successfully
+//         if($user_result && $author_result) {
         
-          // Redirected to login page with a message
-          alert("Author and User Signup Successful, Please Login");
-          redirect('./author-login.php');
-        }
-        // If the Query failed
-        else {
+//           // Redirected to login page with a message
+//           alert("Author and User Signup Successful, Please Login");
+//           redirect('./author-login.php');
+//         }
+//         // If the Query failed
+//         else {
 
-          // Print the error
-          echo "Error: ".mysqli_error($con);
-        }
-      }
-    }
-  }
+//           // Print the error
+//           echo "Error: ".mysqli_error($con);
+//         }
+//       }
+//     }
+//   }
 ?>
 
 
@@ -198,7 +198,7 @@
   <!-- Container to store two form divs -->
   <div class="forms-container">
     <!-- Left div for login -->
-    <div class="left">
+    <div >
       <div class="form-title">
         <h4>Author Login</h4>
       </div>
@@ -223,40 +223,8 @@
         <p class="errors" id="login-errors"></p>
       </div>
     </div>
-    <!-- Right div for Signup -->
-    <div class="right">
-      <div class="form-title">
-        <h4>Author Signup</h4>
-      </div>
-      <div class="signup-form-container">
-        <form method="POST" class="signup-form" id="signup-form">
-          <div class="input-field">
-            <input type="text" name="signup-name" id="signup-name" placeholder=" Name" autocomplete="off" required>
-          </div>
-          <div class="input-field">
-            <input type="email" name="signup-email" id="signup-email" placeholder=" Email Address" autocomplete="off"
-              required>
-          </div>
-          <div class="input-field">
-            <input type="password" name="signup-password" id="signup-password" placeholder=" Password"
-              autocomplete="off" required>
-          </div>
-          <div class="input-field">
-            <input type="password" name="signup-confirm-password" id="signup-confirm-password"
-              placeholder=" Confirm Password" autocomplete="off" required>
-          </div>
-          <div class="input-field">
-            <button type="submit" name="signup-submit">Signup</button>
-          </div>
-        </form>
-      </div>
-      <!-- Div to display the errors from the Signup form -->
-      <div class="form-errors d-flex">
-        <p class="errors" id="signup-errors">
-          Password must be 6 to 20 characters long with aleast 1 number, 1 uppercase and 1 lowecase
-        </p>
-      </div>
-    </div>
+    
+    
   </div>
 </div>
 

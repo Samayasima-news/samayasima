@@ -33,20 +33,26 @@ function deleteConfirm(id) {
           $page = 1;
         }
         $offset = ($page - 1) * $limit;
-        $sql = "SELECT article.article_title, 
-                article.article_id, 
-                article.article_date, 
-                author.author_name, 
-                article.article_image, 
-                article.article_trend, 
-                article.article_active, 
-                article.article_description, 
-                category.category_name 
-                FROM article, category, author
-                WHERE article.category_id = category.category_id
-                AND article.author_id = author.author_id
-                ORDER BY article.article_date DESC
-                LIMIT {$offset},{$limit}";
+        $sql = "SELECT 
+            article.article_title, 
+            article.article_id, 
+            article.article_date, 
+            author.author_name, 
+            article.article_image, 
+            article.article_trend, 
+            article.article_active, 
+            article.article_description, 
+            category.category_name 
+        FROM 
+            article, category, author 
+        WHERE 
+            article.category_id = category.category_id 
+            AND article.author_id = author.author_id 
+        ORDER BY 
+            article.article_id DESC 
+        LIMIT 
+            {$offset}, {$limit}";
+
         $result = mysqli_query($con,$sql);
         $row = mysqli_num_rows($result);
 

@@ -138,15 +138,6 @@
   background: #0e7bad;
 }
 
-.btn-download {
-  background: #e21010;
-  font-weight: 700;
-  padding: 0.5rem 0.7rem;
-  font-size: var(--ts-sml);
-}
-.btn-download:hover {
-  background: #ad0e0e;
-}
 
 .btn-block {
   display: block;
@@ -162,7 +153,7 @@
   border-radius: 0;
 }
 .btn-card:hover {
-  background: var(--tag-trend-color);
+  background: var(--hover-color);
 }
 .btn-card span {
   transition: all 200ms ease-in-out;
@@ -191,12 +182,12 @@
 
 .card .card-img img {
   object-fit: cover;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
   transition: all 250ms ease-in-out;
   height: inherit;
 }
 .card:hover img {
-  filter: grayscale(0);
+  /* filter: grayscale(0); */
   transform: scale(1.06);
 }
 

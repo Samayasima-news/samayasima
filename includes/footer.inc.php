@@ -18,9 +18,9 @@
       <h2>द्रुत लिङ्कहरू</h2>
       <ul class="box">
         <li><a href="./index.php">गृह पृष्ठ</a></li>
-        <li><a href="./categories.php">कोटीहरू</a></li>
         <li><a href="./bookmarks.php">बुकमार्कहरू</a></li>
         <li><a href="./search.php?trending=1">ट्रेन्डिङ</a></li>
+        <li><a href="./aboutus.php">हाम्रो बारेमा</a></li>
       </ul>
     </li>
     <li>
@@ -59,7 +59,7 @@
         <li><a href="./categories.php">More +</a></li>
       </ul>
     </li>
-    
+
   </ul>
   <div class="footer-bottom">
     <p>सबै अधिकार  &copy; समयसीमा द्वारा सुरक्षित  <?php echo date("Y")?></p>

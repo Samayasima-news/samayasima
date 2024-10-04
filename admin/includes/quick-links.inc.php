@@ -24,6 +24,10 @@
     </a>
     <a href="./index.php" class="list-group-item"><span class="glyphicon glyphicon-home"></span> Dashboard
     </a>
+    <a href="./author-signup.php" class="list-group-item"><span class="glyphicon glyphicon-list"></span> Author_Signup
+    </a>
+    <a href="./author11.php" class="list-group-item"><span class="glyphicon glyphicon-list"></span> Delete_Author
+    </a>
     <a href="./articles.php" class="list-group-item"><span class="glyphicon glyphicon-pencil"></span> Articles
       <span class="badge"><?php echo $no_of_articles ?></span></a>
     <a href="./categories.php" class="list-group-item"><span class="glyphicon glyphicon-list"></span> Categories

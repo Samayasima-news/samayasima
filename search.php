@@ -11,7 +11,7 @@
         <table class=".search-table">
           <tr>
             <td>
-              <input class="search-input" type="text" name="name" id="name" placeholder="खोज्नुहोस्" autocomplete="off" />
+              <input style="height: 25px;" class="search-input" type="text" name="name" id="name" placeholder="शीर्षक वा स्तम्भ खोज्नुहोस" autocomplete="off" />
             </td>
           </tr>
         </table>
