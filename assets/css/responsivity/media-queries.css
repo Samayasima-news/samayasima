@@ -52,7 +52,7 @@
     float: left;
   }
   .navbar .logo {
-    padding-left: 30px;
+    padding-left: 10px;
     width: 100%;
   }
   .show + a,
@@ -82,7 +82,7 @@
     color: var(--black-color);
     position: absolute;
     top: 0;
-    right: 40px;
+    right: 20px;
     line-height: 70px;
     cursor: pointer;
   }

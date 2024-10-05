@@ -1,7 +1,7 @@
 <!--? ======== FOOTER ======== -->
 <footer class="footer">
   <div class="footer-left">
-    <a href="./index.php"><img src="./assets/images/logo_light.png" /></a>
+    <a href="./index.php"><img src="./assets/images/logo.png" /></a>
     <p>
     विश्व समाचार को संग्रह बिन्दु। एक बिसौनी पसल। हामी तपाईलाई संसारभरका वर्तमान घटनाहरू बाट ल्याउँछौं
     आदरणीय लेखकहरू। हामीले तपाईलाई ल्याएका यस प्लेटफर्म मार्फत पढ्न र हामीसँग रहन सुनिश्चित गर्नुहोस्। समयसीमा
@@ -56,7 +56,7 @@
               }
             }
           ?>
-        <li><a href="./categories.php">More +</a></li>
+        <li><a href="./categories.php">थप +</a></li>
       </ul>
     </li>
 

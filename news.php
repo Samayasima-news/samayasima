@@ -211,7 +211,7 @@
                 $article_date = date("d M Y", $article_date);
                 
                 // Updating the title with a substring containing at most length of 75 characters
-                $article_title = substr($article_title,0,75).' . . . . .';
+                $article_title = substr($article_title,0,350);
                 
                 // Calling user defined function to create an aside article card with respective article details
                 createAsideCard($article_image, $article_id, $article_title, $author_name,$article_date);

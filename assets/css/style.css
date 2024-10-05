@@ -36,15 +36,15 @@
 }
 .navbar .logo {
   float: left;
-  padding-left: 60px;
-  padding-top: 12px;
+  padding-left: 10px;
+  padding-top: 5px;
 }
 .navbar .logo img {
-  width: 180px;
+  width: 250px;
 }
 .navbar ul {
   float: right;
-  margin-right: 40px;
+  margin-right: 10px;
   list-style: none;
   position: relative;
 }

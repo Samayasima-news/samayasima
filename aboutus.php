@@ -4,53 +4,6 @@
   
   
 ?>
-
-
-    <title>हाम्रो बारेमा</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-        .member {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .member:nth-child(odd) {
-            flex-direction: row;
-        }
-        .member:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        .photo {
-            flex: 1;
-            padding: 10px;
-        }
-        .photo img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        .description {
-            flex: 2;
-            padding: 10px;
-        }
-        .description h3 {
-            margin: 0;
-            color: #007BFF;
-        }
-        .description p {
-            margin: 5px 0;
-        }
-    </style>
-</head>
-<body>
     <div class="container">
         <h1>हाम्रो बारेमा</h1>
 
@@ -98,5 +51,10 @@
             </div>
         </div>
     </div>
-</body>
 
+
+<?php
+
+  // Fetching all the Footer Data
+  require('./includes/footer.inc.php');
+?>
